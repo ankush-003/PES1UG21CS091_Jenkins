@@ -4,7 +4,6 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Replace 'main.cpp' with the correct name of your C++ file
                     sh 'g++ working.cpp -o output'
                 }
             }
@@ -12,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh './output'
+                    sh './output-error'
                 }
             }
         }
